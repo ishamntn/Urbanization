@@ -129,39 +129,70 @@
 
   <!-- MEDIA GALLERY SECTION -->
   <section id="media" class="content-section">
-    <div class="container">
-      <h2 class="section-title">Media Gallery</h2>
-      <p>
-        Below are images and short clips illustrating urbanization trends. Click each to view full source.
-      </p>
-      <div class="gallery-grid">
-        <div class="gallery-item">
-          <a href="https://example.com/urbanization_video1" target="_blank">
-            <img src="images/gallery1.jpg" alt="Time-lapse of city growth" />
-            <div class="gallery-caption">Time-lapse of Manila’s expansion (2020–2024)</div>
-          </a>
+  <div class="container">
+    <h2 class="section-title">Media Gallery</h2>
+    <p>
+      Below are images and a video illustrating urbanization trends. Each item sits in a 2×2 grid.
+    </p>
+    <div class="gallery-grid">
+      <!-- 1st item: embedded YouTube video -->
+      <div class="gallery-item">
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/x4NjgkYENh8"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
-        <div class="gallery-item">
-          <a href="https://example.com/urbanization_photo2" target="_blank">
-            <img src="images/gallery2.jpg" alt="Community in informal settlement" />
-            <div class="gallery-caption">Informal settlement on city outskirts (Source: XYZ NGO)</div>
-          </a>
-        </div>
-        <div class="gallery-item">
-          <a href="https://example.com/urbanization_photo3" target="_blank">
-            <img src="images/gallery3.jpg" alt="Reclaimed land development" />
-            <div class="gallery-caption">Reclaimed land project in Cebu City</div>
-          </a>
-        </div>
-        <div class="gallery-item">
-          <a href="https://example.com/urbanization_chart" target="_blank">
-            <img src="images/gallery4.jpg" alt="Urban population growth chart" />
-            <div class="gallery-caption">Projected urban population growth (2025–2035)</div>
-          </a>
+        <div class="gallery-caption">
+          Time-lapse of Manila’s expansion (2020–2024)
         </div>
       </div>
+
+      <!-- 2nd item: informal settlement photo -->
+      <div class="gallery-item">
+        <a href="https://commons.wikimedia.org/wiki/File:Manila_Philippines.jpg" target="_blank">
+          <img
+            src="gallery2.jpg"
+            alt="Informal settlement on city outskirts"
+          />
+          <div class="gallery-caption">
+            Informal settlement on city outskirts (Source: Wikimedia Commons)
+          </div>
+        </a>
+      </div>
+
+      <!-- 3rd item: reclaimed land project -->
+      <div class="gallery-item">
+        <a
+          href="https://m.facebook.com/hesrealequipment/photos/cebus-south-road-properties-srp-reclaimed-land-using-dredging-machines-the-land-/1096238595845241/"
+          target="_blank"
+        >
+          <img
+            src="gallery3.jpg"
+            alt="Reclaimed land project in Cebu City"
+          />
+          <div class="gallery-caption">
+            Reclaimed land project in Cebu City (Source: Hesreal Heavy Equipment Rental)
+          </div>
+        </a>
+      </div>
+
+      <!-- 4th item: urban growth chart -->
+      <div class="gallery-item">
+        <a href="https://www.cia.gov/the-world-factbook/static/b2c75f43c058042d426174e0032fbfd7/urban_RP.pdf" target="_blank">
+          <img
+            src="gallery4.png"
+            alt="Urban population growth chart"
+          />
+          <div class="gallery-caption">
+            Urban population growth chart (Source: CIA Factbook)
+          </div>
+        </a>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- REFERENCES SECTION -->
   <section id="references" class="content-section bg-light">

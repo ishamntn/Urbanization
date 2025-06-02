@@ -9,6 +9,7 @@ body {
   font-family: Arial, sans-serif;
   color: #333;
   background-color: #f9f9f9;
+  background: none;
 }
 
 /* ==================== NAVBAR ==================== */
@@ -32,7 +33,7 @@ body {
   letter-spacing: 1px;
 }
 .logo span {
-  color: #2a2233;             /* “Hub” in purple */
+  color: #e02d47;             /* “Hub” in purple */
 }
 
 .nav-links {
@@ -103,6 +104,11 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 60px; /* to account for fixed navbar */
+  background: url('bg.jpg') no-repeat center center;
+  background-size: cover;
+  /* keep whatever height/padding you need */
+  height: 90vh;
+  position: relative;
 }
 
 .hero-overlay {
@@ -396,4 +402,21 @@ body {
     font-size: 0.9rem;
     padding: 1% 0;
   }
+}
+
+/* responsive 16:9 video wrapper */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 9/16 ratio */
+  height: 0;
+  margin-bottom: 2%;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
