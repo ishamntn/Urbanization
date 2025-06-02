@@ -1,0 +1,399 @@
+/* ========= GLOBAL RESET & BASE STYLES ========= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* semi‐dark background */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1% 5%;            /* top/bottom 1%, left/right 5% */
+  position: fixed;           /* stick to top */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo a {
+  color: #fff;
+  font-size: 1.5rem;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.logo span {
+  color: #2a2233;             /* “Hub” in purple */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  /* Prevent wrapping: */
+  flex-wrap: nowrap;
+}
+
+.nav-links li {
+  margin-left: 2rem;         /* space between links */
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #5a00b4;
+  border-radius: 4px;
+}
+
+/* ==================== DONATE BUTTON ==================== */
+.donate-btn {
+  background-color: #5a00b4;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.donate-btn:hover {
+  background-color: #33005d;
+}
+
+/* ==================== RESPONSIVE BREAKPOINTS ==================== */
+/* Collapse nav‐links into a “hamburger” or hide them if needed */
+/* For simplicity, we’ll just hide the nav‐links and donate button at <= 768px */
+@media (max-width: 768px) {
+  .nav-links,
+  .donate-btn {
+    display: none;
+  }
+}
+
+/* If you want to shrink logo text on very small screens: */
+@media (max-width: 480px) {
+  .logo a {
+    font-size: 1.2rem;
+  }
+}
+
+/* ========= HERO SECTION ========= */
+.hero-section {
+  width: 100%;
+  height: 90vh;
+  background: url('images/urbanization_context.jpg') no-repeat center/cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px; /* to account for fixed navbar */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  width: 80%;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.hero-content h2 {
+  font-size: 1.5rem;
+  margin: 1% 0;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  margin-bottom: 2%;
+}
+
+.hero-buttons .btn {
+  display: inline-block;
+  margin: 1% 1%;
+  font-size: 1rem;
+  padding: 0.8% 2%;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: #5a00b4;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #33005d;
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: #5a00b4;
+  border: 2px solid #5a00b4;
+  text-decoration: none;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #5a00b4;
+  color: #fff;
+}
+
+/* ========= SECTIONS ========= */
+.content-section {
+  width: 100%;
+  padding: 5% 5%;
+}
+
+.bg-light {
+  background-color: #f1f1f1;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section titles */
+.section-title {
+  font-size: 2rem;
+  color: #5a00b4;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+/* ========= “What’s the Issue?” SECTION ========= */
+#issue p,
+#issue ul {
+  font-size: 1rem;
+  margin-bottom: 1.5%;
+}
+
+.bullet-list {
+  list-style: disc inside;
+  margin-left: 2%;
+}
+
+.image-card {
+  margin-top: 3%;
+  text-align: center;
+}
+
+.image-card img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.image-card .caption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5%;
+}
+
+/* ========= IMPACTS SECTION ========= */
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 3%;
+}
+
+.info-card {
+  background-color: #fff;
+  border-radius: 8px;
+  width: 32%;
+  margin-bottom: 2%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 2%;
+}
+
+.card-content h3 {
+  color: #5a00b4;
+  margin-bottom: 1%;
+  font-size: 1.2rem;
+}
+
+.card-content p {
+  font-size: 1rem;
+  margin-bottom: 1%;
+}
+
+.card-content .bullet-list {
+  list-style: circle inside;
+  margin-left: 3%;
+  font-size: 0.95rem;
+}
+
+/* ========= MEDIA GALLERY SECTION ========= */
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 3%;
+}
+
+.gallery-item {
+  width: 48%;
+  margin-bottom: 2%;
+  position: relative;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-caption {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 0.9rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1% 2%;
+  box-sizing: border-box;
+  border-radius: 0 0 8px 8px;
+}
+
+/* ========= REFERENCES SECTION ========= */
+.references-list {
+  list-style: none;
+  font-size: 1rem;
+  margin-top: 2%;
+}
+
+.references-list li {
+  margin-bottom: 1%;
+}
+
+.references-list a {
+  color: #5a00b4;
+  text-decoration: none;
+}
+
+.references-list a:hover {
+  text-decoration: underline;
+}
+
+.references-list ul {
+  margin-top: 0.5%;
+  margin-left: 2%;
+}
+
+/* ========= FOOTER ========= */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 3% 5%;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.footer a:hover {
+  color: #ccc;
+}
+
+/* ========= RESPONSIVE BREAKPOINTS ========= */
+@media (max-width: 1024px) {
+  .info-card {
+    width: 48%;
+  }
+  .gallery-item {
+    width: 48%;
+  }
+}
+
+@media (max-width: 768px) {
+  .info-card {
+    width: 100%;
+  }
+  .card-grid {
+    flex-direction: column;
+  }
+  .gallery-item {
+    width: 100%;
+  }
+  .nav-links {
+    display: none;
+  }
+  .nav-action {
+    display: none;
+  }
+  .navbar {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+  .hero-buttons .btn {
+    margin: 2% 2%;
+    width: 80%;
+    font-size: 0.9rem;
+    padding: 1% 0;
+  }
+}
