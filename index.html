@@ -233,6 +233,45 @@
       </p>
       <p>&copy; 2025 AdvocacyHub</p>
     </div>
+    <section id="statistics">
+  <h2 class="section-title">Urban Population Growth (Philippines)</h2>
+  <canvas id="urbanChart" width="100%" height="50"></canvas>
+</section>
+
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('urbanChart').getContext('2d');
+  const urbanChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['2000', '2005', '2010', '2015', '2020', '2023'],
+      datasets: [{
+        label: 'Urban Population (%)',
+        data: [37.5, 40.2, 43.1, 45.6, 46.9, 47.5],
+        backgroundColor: 'rgba(46, 204, 113, 0.2)',
+        borderColor: 'rgba(39, 174, 96, 1)',
+        borderWidth: 2,
+        fill: true,
+        tension: 0.3
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      aspectRatio: 2,
+      scales: {
+        y: {
+          beginAtZero: false,
+          title: {
+            display: true,
+            text: '% of Population in Urban Areas'
+          }
+        }
+      }
+    }
+  });
+</script>
+
 </body>
 </html>

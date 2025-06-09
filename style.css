@@ -420,3 +420,15 @@ body {
   height: 100%;
   border: 0;
 }
+
+#statistics {
+  padding: 4% 5%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+#urbanChart {
+  max-width: 100%;
+  height: 300px;
+}
+
